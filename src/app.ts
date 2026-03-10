@@ -38,5 +38,6 @@ app.use('/api/workout',       workoutRoutes);
 app.use('/api/chat',          chatRoutes);
 app.use('/api/notifications', notificationsRoutes);
 app.use('/api/ai',            aiRoutes);
+app.set('trust proxy', 1);
 
 app.use(errorMiddleware);

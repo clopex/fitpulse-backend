@@ -1,7 +1,7 @@
 import { sequelize } from '../../config/db';
 import { QueryTypes } from 'sequelize';
 
-const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent';
+const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent';
 
 const callGemini = async (prompt: string, systemPrompt: string): Promise<string> => {
   const response = await fetch(`${GEMINI_URL}?key=${process.env.GEMINI_API_KEY}`, {
