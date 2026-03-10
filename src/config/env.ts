@@ -11,6 +11,7 @@ export const env = {
   NODE_ENV:              process.env.NODE_ENV || 'development',
   DATABASE_URL:          required('DATABASE_URL'),
   JWT_SECRET:            required('JWT_SECRET'),
+  GEMINI_API_KEY: required('GEMINI_API_KEY'),
   JWT_EXPIRES_IN:        process.env.JWT_EXPIRES_IN || '7d',
   BCRYPT_ROUNDS:         parseInt(process.env.BCRYPT_ROUNDS || '12'),
   IMAGEKIT_PUBLIC_KEY:   process.env.IMAGEKIT_PUBLIC_KEY || '',
