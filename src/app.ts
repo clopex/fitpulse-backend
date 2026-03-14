@@ -16,6 +16,7 @@ import { chatRoutes } from './modules/chat/chat.routes';
 import { notificationsRoutes } from './modules/notifications/notifications.routes';
 import { aiRoutes } from './modules/ai/ai.routes';
 import { dashboardRoutes } from './modules/dashboard/dashboard.routes';
+import paymentRoutes from './modules/payment/payment.routes';
 
 export const app = express();
 
@@ -41,5 +42,6 @@ app.use('/api/notifications', notificationsRoutes);
 app.use('/api/ai',            aiRoutes);
 app.set('trust proxy', 1);
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/payment', paymentRoutes);
 
 app.use(errorMiddleware);
